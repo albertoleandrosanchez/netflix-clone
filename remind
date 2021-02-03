@@ -1,0 +1,27 @@
+api key
+
+46b621dee8f0a395e8ec34fdd45122d2
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD9Enm1vJGouwWPzXUm4PCUrlpuWU5ZCjg",
+    authDomain: "netflix-clone-ea18d.firebaseapp.com",
+    projectId: "netflix-clone-ea18d",
+    storageBucket: "netflix-clone-ea18d.appspot.com",
+    messagingSenderId: "743168033687",
+    appId: "1:743168033687:web:c2555f0856faac9a31fad2",
+    measurementId: "G-WSHZJL01SW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
