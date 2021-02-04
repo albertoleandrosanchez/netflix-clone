@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "./axios";
 import "./Row.css"
 
-function Row({title, fetchUrl}) {
+function Row({title, fetchUrl,isLargeRow}) {
 
     let baseURL="https://image.tmdb.org/t/p/w500/"
     //seteo una lista vacia con useState
@@ -19,7 +19,6 @@ function Row({title, fetchUrl}) {
         fetchData();
     },[fetchUrl]) //ponemos como dependencia fetchUrl ya que queremos que cambie la info si esta es cambiada en algun momento.
 
-    console.log(movies);
     
 
     //el return es lo que va a mostrar siempre
@@ -28,7 +27,12 @@ function Row({title, fetchUrl}) {
             <h2>{title}</h2>
             <div className="row__posters">
                 {movies.map(movie =>(
-                    <img className="row__poster" src={`${baseURL}${movie.poster_path}`} alt={movie.name}/>
+                    <img 
+                    key={movie.id}
+                    className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                    //&& hace que si se cumple la condicion AGREGA lo siguiente
+                    src={`${baseURL}${isLargeRow? movie.poster_path: movie.backdrop_path}`} alt={movie.name}
+                    />
                 ))}
             </div>
         </div>
