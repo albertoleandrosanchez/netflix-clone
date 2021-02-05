@@ -24,7 +24,7 @@ function Row({title, fetchUrl,isLargeRow}) {
     //el return es lo que va a mostrar siempre
     return (
         <div className="row">
-            <h2>{title}</h2>
+            <h2 className="row__title">{title}</h2>
             <div className="row__posters">
                 {movies.map(movie =>(
                     <img 

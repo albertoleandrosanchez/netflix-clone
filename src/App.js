@@ -5,7 +5,7 @@ import Banner from './Banner'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       {/*NAV*/ }
       <Banner/>
       <Row title="NETFLIX ORIGINALS"
